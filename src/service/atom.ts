@@ -2,5 +2,6 @@ import { atom } from "recoil";
 
 export const isDarkAtom = atom({
   key: "isDark",
-  default: false,
+  default:
+    !sessionStorage.getItem("isDark") || sessionStorage.getItem("isDark") === "true" ? true : false,
 });

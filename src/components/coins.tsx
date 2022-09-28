@@ -72,7 +72,11 @@ const Coins = () => {
   const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
 
   const setDarkAtom = useSetRecoilState(isDarkAtom);
-  const toggleDarkAtom = () => setDarkAtom((prev) => !prev);
+  const toggleDarkAtom = () =>
+    setDarkAtom((prev) => {
+      sessionStorage.setItem("isDark", (!prev).toString());
+      return !prev;
+    });
 
   return (
     <Container>
