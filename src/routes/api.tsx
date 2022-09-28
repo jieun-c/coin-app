@@ -5,11 +5,11 @@ export async function fetchCoins() {
 }
 
 export async function fetchCoinInfo(coinId: string) {
-  return await (await fetch(`https://api.coinpaprika.com/v1/coins/${coinId}`)).json();
+  return await (await fetch(`${BASE_URL}/coins/${coinId}`)).json();
 }
 
 export async function fetchCoinTickers(coinId: string) {
-  return await (await fetch(`https://api.coinpaprika.com/v1/tickers/${coinId}`)).json();
+  return await (await fetch(`${BASE_URL}/tickers/${coinId}`)).json();
 }
 
 export async function fetchCoinHistory(coinId: string) {
