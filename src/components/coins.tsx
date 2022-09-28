@@ -7,8 +7,10 @@ import { isDarkAtom } from "../service/atom";
 import { fetchCoins } from "../service/api";
 
 const Container = styled.div`
-  padding: 0 20px;
-  width: 480px;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 480px;
+  min-width: 320px;
   margin: 0 auto;
 `;
 
@@ -17,6 +19,7 @@ const Header = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 const Title = styled.h1`
@@ -85,7 +88,12 @@ const Coins = () => {
       </Helmet>
       <Header>
         <Title>코인</Title>
-        <button onClick={toggleDarkAtom}>Toggle</button>
+        <button
+          style={{ position: "absolute", top: "50%", right: 0, transform: "translateY(-50%)" }}
+          onClick={toggleDarkAtom}
+        >
+          Change Theme
+        </button>
       </Header>
       {isLoading ? (
         <Loading>Loading...</Loading>

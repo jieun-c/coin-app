@@ -5,8 +5,10 @@ import styled from "styled-components";
 import { fetchCoinInfo, fetchCoinTickers } from "../service/api";
 
 const Container = styled.div`
-  padding: 0 20px;
-  width: 480px;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 480px;
+  min-width: 320px;
   margin: 0 auto;
 `;
 
