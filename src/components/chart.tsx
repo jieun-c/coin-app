@@ -1,9 +1,9 @@
 import { useQuery } from "react-query";
 import { useOutletContext } from "react-router-dom";
-import { fetchCoinHistory } from "./api";
+import { fetchCoinHistory } from "../service/api";
 import ReactApexChart from "react-apexcharts";
 import { useRecoilValue } from "recoil";
-import { isDarkAtom } from "../atom";
+import { isDarkAtom } from "../service/atom";
 
 interface ChartProps {
   coinId: string;

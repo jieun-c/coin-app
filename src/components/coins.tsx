@@ -3,8 +3,8 @@ import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import styled from "styled-components";
-import { isDarkAtom } from "../atom";
-import { fetchCoins } from "./api";
+import { isDarkAtom } from "../service/atom";
+import { fetchCoins } from "../service/api";
 
 const Container = styled.div`
   padding: 0 20px;

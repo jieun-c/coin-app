@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import { useOutletContext } from "react-router-dom";
 import styled from "styled-components";
-import { fetchCoinTickers } from "./api";
+import { fetchCoinTickers } from "../service/api";
 
 const Box = styled.div<IBox>`
   width: 100%;

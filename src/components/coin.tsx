@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { Helmet } from "react-helmet-async";
 import { Link, Outlet, useLocation, useMatch, useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
-import { fetchCoinInfo, fetchCoinTickers } from "./api";
+import { fetchCoinInfo, fetchCoinTickers } from "../service/api";
 
 const Container = styled.div`
   padding: 0 20px;

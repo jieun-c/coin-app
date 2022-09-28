@@ -1,12 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import Router from "./router";
+import Router from "./router/router";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "styled-components";
-import { darkTheme, lightTheme } from "./theme";
+import { darkTheme, lightTheme } from "./styles/theme";
 import { useRecoilValue } from "recoil";
-import { isDarkAtom } from "./atom";
+import { isDarkAtom } from "./service/atom";
 
 /* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap'); */
 const GlobalStyle = createGlobalStyle`

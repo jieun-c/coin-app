@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Coins from "./routes/coins";
-import Coin from "./routes/coin";
-import Price from "./routes/price";
-import Chart from "./routes/chart";
+import Coins from "../components/coins";
+import Coin from "../components/coin";
+import Price from "../components/price";
+import Chart from "../components/chart";
 
 const Router = () => {
   return (
