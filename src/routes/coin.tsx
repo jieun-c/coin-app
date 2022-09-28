@@ -51,8 +51,8 @@ const Loading = styled.span`
 const Overview = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  background-color: ${(props) => props.theme.textColor};
+  color: ${(props) => props.theme.bgColor};
   width: 100%;
   border-radius: 10px;
   padding: 10px 20px;
@@ -75,6 +75,7 @@ const OverviewItem = styled.div`
 const Description = styled.p`
   margin: 20px 0;
   line-height: 25px;
+  color: ${(props) => props.theme.textColor};
 `;
 
 const Tabs = styled.div`
@@ -90,12 +91,12 @@ const Tab = styled.span<{ isActive: boolean }>`
   font-size: 12px;
   font-weight: 400;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: ${(props) => props.theme.textColor};
   flex: 1;
   a {
     display: block;
     padding: 10px 0;
-    color: ${(props) => (props.isActive ? props.theme.accentColor : "white")};
+    color: ${(props) => (props.isActive ? props.theme.accentColor : props.theme.bgColor)};
   }
 `;
 

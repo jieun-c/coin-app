@@ -6,13 +6,16 @@ import { fetchCoinTickers } from "./api";
 const Box = styled.div<IBox>`
   width: 100%;
   padding: 1em;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${(props) => props.theme.textColor};
   border-radius: 10px;
   margin-bottom: 1em;
   display: flex;
   justify-content: space-between;
+  span:nth-child(1) {
+    color: ${(props) => props.theme.bgColor};
+  }
   span:nth-child(2) {
-    color: ${(props) => (props.price >= 0 ? "green" : "red")};
+    color: ${(props) => (props.price >= 0 ? "#31a131" : "red")};
   }
 `;
 

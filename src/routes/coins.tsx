@@ -33,7 +33,9 @@ const Loading = styled.span`
 const CoinsList = styled.ul``;
 
 const Coin = styled.li`
-  background-color: white;
+  background-color: ${(props) => props.theme.bgColor};
+  border: 1px solid;
+  border-color: ${(props) => props.theme.textColor};
   color: ${(props) => props.theme.textColor};
   margin-bottom: 10px;
   border-radius: 15px;
